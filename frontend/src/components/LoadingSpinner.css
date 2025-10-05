@@ -1,0 +1,107 @@
+.loading-spinner {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 400px;
+  padding: var(--spacing-xl);
+  transform: none !important;
+}
+
+.spinner-orb {
+  position: relative;
+  width: 150px;
+  height: 150px;
+  margin-bottom: var(--spacing-xl);
+  transform: none !important;
+}
+
+.orb-core {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 40px;
+  height: 40px;
+  background: radial-gradient(circle, var(--accent-color), var(--accent-hover));
+  border-radius: 50%;
+  box-shadow: var(--glow-accent);
+  animation: pulse 2s ease-in-out infinite;
+}
+
+.orb-ring {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  border-radius: 50%;
+  border: 2px solid var(--accent-color);
+  opacity: 0.3;
+}
+
+.ring-1 {
+  width: 60px;
+  height: 60px;
+  animation: orbit 3s linear infinite;
+}
+
+.ring-2 {
+  width: 90px;
+  height: 90px;
+  animation: orbit 4s linear infinite reverse;
+}
+
+.ring-3 {
+  width: 120px;
+  height: 120px;
+  animation: orbit 5s linear infinite;
+}
+
+@keyframes orbit {
+  from { transform: translate(-50%, -50%) rotate(0deg); }
+  to { transform: translate(-50%, -50%) rotate(360deg); }
+}
+
+.loading-text {
+  text-align: center;
+  margin-bottom: var(--spacing-lg);
+}
+
+.loading-text h3 {
+  font-size: 1.5rem;
+  color: var(--accent-color);
+  margin-bottom: var(--spacing-xs);
+}
+
+.loading-text p {
+  color: var(--text-secondary);
+  font-size: 1rem;
+}
+
+.loading-steps {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-sm);
+}
+
+.step-item {
+  display: flex;
+  align-items: center;
+  gap: var(--spacing-sm);
+  color: var(--text-secondary);
+  font-size: 0.9rem;
+}
+
+.step-dot {
+  width: 8px;
+  height: 8px;
+  background: var(--accent-color);
+  border-radius: 50%;
+  box-shadow: 0 0 10px var(--accent-color);
+  animation: blink 1s ease-in-out infinite;
+}
+
+@keyframes blink {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0.3; }
+}

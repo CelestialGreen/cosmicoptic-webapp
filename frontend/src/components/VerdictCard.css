@@ -1,0 +1,123 @@
+.verdict-card {
+  border-left: 4px solid var(--accent-color);
+  transition: all 0.3s ease;
+}
+
+.verdict-header {
+  text-align: center;
+  padding: var(--spacing-lg) 0;
+  border-bottom: 1px solid var(--panel-border);
+  margin-bottom: var(--spacing-lg);
+}
+
+.verdict-icon {
+  display: block;
+  margin-bottom: var(--spacing-sm);
+  animation: fadeInUp 0.6s ease-out;
+}
+
+.verdict-title {
+  font-size: 1.8rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  text-shadow: 0 0 10px currentColor;
+}
+
+/* Confidence Section */
+.confidence-section {
+  margin-bottom: var(--spacing-lg);
+  padding-bottom: var(--spacing-lg);
+  border-bottom: 1px solid var(--panel-border);
+}
+
+.confidence-label {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: var(--spacing-sm);
+  font-size: 0.9rem;
+  color: var(--text-secondary);
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.confidence-level {
+  padding: 0.25rem 0.75rem;
+  background: rgba(0, 191, 255, 0.2);
+  border-radius: var(--radius-sm);
+  color: var(--accent-color);
+  font-weight: 600;
+}
+
+.confidence-bar {
+  height: 30px;
+  background: rgba(0, 0, 0, 0.4);
+  border-radius: var(--radius-sm);
+  overflow: hidden;
+  margin-bottom: var(--spacing-xs);
+  border: 1px solid var(--panel-border);
+}
+
+.confidence-fill {
+  height: 100%;
+  background: var(--accent-color);
+  border-radius: var(--radius-sm);
+  box-shadow: 0 0 20px currentColor;
+  transition: width 1s ease-out;
+}
+
+.confidence-value {
+  text-align: center;
+  font-size: 1.5rem;
+  font-weight: 600;
+  color: var(--text-color);
+}
+
+/* Probabilities Section */
+.probabilities-section h3 {
+  font-size: 1rem;
+  color: var(--text-secondary);
+  margin-bottom: var(--spacing-md);
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.probability-item {
+  margin-bottom: var(--spacing-md);
+}
+
+.prob-label {
+  display: flex;
+  align-items: center;
+  gap: var(--spacing-xs);
+  margin-bottom: var(--spacing-xs);
+  font-size: 0.9rem;
+  color: var(--text-color);
+}
+
+.prob-icon {
+  font-size: 1.2rem;
+}
+
+.prob-bar {
+  height: 20px;
+  background: rgba(0, 0, 0, 0.4);
+  border-radius: var(--radius-sm);
+  overflow: hidden;
+  margin-bottom: var(--spacing-xs);
+  border: 1px solid var(--panel-border);
+}
+
+.prob-fill {
+  height: 100%;
+  border-radius: var(--radius-sm);
+  transition: width 0.8s ease-out;
+}
+
+.prob-value {
+  display: block;
+  text-align: right;
+  font-size: 0.9rem;
+  color: var(--text-secondary);
+}

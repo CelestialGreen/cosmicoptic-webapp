@@ -1,0 +1,91 @@
+{
+  "samples": [
+    {
+      "id": "kepler-186f",
+      "name": "Kepler-186f",
+      "description": "Earth-sized exoplanet in habitable zone",
+      "truth": "confirmed",
+      "params": {
+        "period_days": 129.9,
+        "transit_depth": 0.004,
+        "transit_duration": 4.5,
+        "planet_radius": 1.17
+      }
+    },
+    {
+      "id": "kepler-452b",
+      "name": "Kepler-452b",
+      "description": "Earth's cousin orbiting Sun-like star",
+      "truth": "confirmed",
+      "params": {
+        "period_days": 384.8,
+        "transit_depth": 0.0035,
+        "transit_duration": 7.2,
+        "planet_radius": 1.63
+      }
+    },
+    {
+      "id": "trappist-1e",
+      "name": "TRAPPIST-1e",
+      "description": "Rocky world in TRAPPIST system",
+      "truth": "confirmed",
+      "params": {
+        "period_days": 6.1,
+        "transit_depth": 0.007,
+        "transit_duration": 1.2,
+        "planet_radius": 0.92
+      }
+    },
+    {
+      "id": "koi-5123",
+      "name": "KOI-5123",
+      "description": "Candidate with weak signal",
+      "truth": "candidate",
+      "params": {
+        "period_days": 45.3,
+        "transit_depth": 0.002,
+        "transit_duration": 3.1,
+        "planet_radius": null
+      }
+    },
+    {
+      "id": "koi-8888",
+      "name": "KOI-8888",
+      "description": "Candidate in noisy data",
+      "truth": "candidate",
+      "params": {
+        "period_days": 12.7,
+        "transit_depth": 0.003,
+        "transit_duration": 2.5,
+        "planet_radius": null
+      }
+    },
+    {
+      "id": "fp-binary-001",
+      "name": "EB-001",
+      "description": "Eclipsing binary star system",
+      "truth": "false_positive",
+      "params": {
+        "anomaly_type": "eclipsing_binary"
+      }
+    },
+    {
+      "id": "fp-variable-002",
+      "name": "VAR-002",
+      "description": "Variable star (pulsating)",
+      "truth": "false_positive",
+      "params": {
+        "anomaly_type": "stellar_variability"
+      }
+    },
+    {
+      "id": "fp-noise-003",
+      "name": "NOISE-003",
+      "description": "Pure instrumental noise",
+      "truth": "false_positive",
+      "params": {
+        "anomaly_type": "noise"
+      }
+    }
+  ]
+}

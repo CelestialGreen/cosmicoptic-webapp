@@ -1,0 +1,213 @@
+.model-metrics {
+  margin-bottom: var(--spacing-lg);
+}
+
+.metrics-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: var(--spacing-md);
+}
+
+.metrics-header h3 {
+  font-size: var(--font-size-xl);
+  color: var(--accent-color);
+  text-shadow: 0 0 8px var(--accent-color);
+  margin: 0;
+}
+
+.refresh-button {
+  background: rgba(0, 191, 255, 0.1);
+  border: 1px solid rgba(0, 191, 255, 0.3);
+  color: var(--accent-color);
+  font-size: 18px;
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.refresh-button:hover {
+  background: rgba(0, 191, 255, 0.2);
+  box-shadow: 0 0 12px rgba(0, 191, 255, 0.4);
+  transform: rotate(180deg);
+}
+
+/* Loading & Error States */
+.metrics-loading,
+.metrics-error {
+  text-align: center;
+  padding: var(--spacing-xl);
+  color: var(--text-secondary);
+}
+
+.loading-spinner {
+  font-size: 32px;
+  display: block;
+  margin-bottom: var(--spacing-sm);
+  animation: spin 2s linear infinite;
+}
+
+@keyframes spin {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(360deg); }
+}
+
+.error-icon {
+  font-size: 32px;
+  display: block;
+  margin-bottom: var(--spacing-sm);
+}
+
+/* Metrics Grid */
+.metrics-grid {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-md);
+  margin-bottom: var(--spacing-lg);
+}
+
+.metric-item {
+  display: flex;
+  align-items: center;
+  gap: var(--spacing-sm);
+}
+
+.metric-label {
+  font-size: var(--font-size-sm);
+  color: var(--text-secondary);
+  min-width: 80px;
+}
+
+.metric-bar {
+  flex: 1;
+  height: 12px;
+  background: rgba(0, 191, 255, 0.1);
+  border-radius: 6px;
+  overflow: hidden;
+  position: relative;
+}
+
+.metric-fill {
+  height: 100%;
+  border-radius: 6px;
+  transition: width 1s ease-out;
+  position: relative;
+}
+
+.metric-fill.accuracy {
+  background: linear-gradient(90deg, var(--accent-color), #00FFFF);
+  box-shadow: 0 0 10px rgba(0, 191, 255, 0.5);
+}
+
+.metric-fill.precision {
+  background: linear-gradient(90deg, #9B59B6, #E74C3C);
+  box-shadow: 0 0 10px rgba(155, 89, 182, 0.5);
+}
+
+.metric-fill.recall {
+  background: linear-gradient(90deg, #27AE60, #2ECC71);
+  box-shadow: 0 0 10px rgba(46, 204, 113, 0.5);
+}
+
+.metric-fill.f1 {
+  background: linear-gradient(90deg, var(--highlight-color), #32CD32);
+  box-shadow: 0 0 10px rgba(127, 255, 0, 0.5);
+}
+
+.metric-value {
+  font-size: var(--font-size-base);
+  color: var(--text-primary);
+  font-weight: 600;
+  min-width: 50px;
+  text-align: right;
+}
+
+/* Stats Section */
+.metrics-stats {
+  padding: var(--spacing-md);
+  background: rgba(0, 191, 255, 0.05);
+  border-radius: var(--border-radius-sm);
+  margin-bottom: var(--spacing-md);
+}
+
+.stat-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: var(--spacing-xs) 0;
+}
+
+.stat-item:not(:last-child) {
+  border-bottom: 1px solid rgba(0, 191, 255, 0.1);
+}
+
+.stat-label {
+  font-size: var(--font-size-sm);
+  color: var(--text-secondary);
+}
+
+.stat-value {
+  font-size: var(--font-size-base);
+  color: var(--text-primary);
+  font-weight: 600;
+}
+
+.stat-value.exoplanets {
+  color: var(--highlight-color);
+}
+
+.stat-value.false-positives {
+  color: var(--warning-color);
+}
+
+/* Footer */
+.metrics-footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-top: var(--spacing-sm);
+  border-top: 1px solid rgba(0, 191, 255, 0.1);
+  font-size: var(--font-size-xs);
+  color: var(--text-secondary);
+}
+
+.model-info,
+.validation-date {
+  display: flex;
+  align-items: center;
+  gap: var(--spacing-xs);
+}
+
+.info-icon,
+.date-icon {
+  font-size: 14px;
+}
+
+.info-text,
+.date-text {
+  font-size: var(--font-size-xs);
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .metric-label {
+    min-width: 70px;
+    font-size: var(--font-size-xs);
+  }
+
+  .metric-value {
+    min-width: 45px;
+    font-size: var(--font-size-sm);
+  }
+
+  .metrics-footer {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: var(--spacing-xs);
+  }
+}

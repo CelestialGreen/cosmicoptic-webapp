@@ -1,0 +1,82 @@
+.light-curve-chart {
+  overflow: hidden;
+  padding: var(--spacing-sm);
+}
+
+.chart-header {
+  margin-bottom: var(--spacing-md);
+  padding-bottom: var(--spacing-sm);
+  border-bottom: 1px solid var(--panel-border);
+}
+
+.chart-header h3 {
+  color: var(--accent-color);
+  margin-bottom: var(--spacing-xs);
+}
+
+.star-name {
+  color: var(--text-secondary);
+  font-size: 0.9rem;
+}
+
+.chart-svg {
+  width: 100%;
+  height: auto;
+  overflow: hidden;
+  display: block;
+}
+
+.chart-svg .x-axis line,
+.chart-svg .y-axis line,
+.chart-svg .x-axis path,
+.chart-svg .y-axis path {
+  stroke: var(--panel-border);
+}
+
+.chart-svg .grid line {
+  stroke: var(--text-dim);
+}
+
+.light-curve-line {
+  filter: drop-shadow(0 0 4px var(--accent-color));
+}
+
+.data-point {
+  cursor: pointer;
+  transition: r 0.2s ease;
+}
+
+.data-point:hover {
+  r: 4;
+  opacity: 1;
+}
+
+.chart-legend {
+  display: flex;
+  gap: var(--spacing-md);
+  margin-top: var(--spacing-md);
+  padding-top: var(--spacing-sm);
+  border-top: 1px solid var(--panel-border);
+  justify-content: center;
+}
+
+.legend-item {
+  display: flex;
+  align-items: center;
+  gap: var(--spacing-xs);
+  color: var(--text-secondary);
+  font-size: 0.85rem;
+}
+
+.legend-line {
+  width: 30px;
+  height: 3px;
+  border-radius: 2px;
+}
+
+.legend-box {
+  width: 20px;
+  height: 15px;
+  border-radius: 2px;
+  opacity: 0.3;
+}

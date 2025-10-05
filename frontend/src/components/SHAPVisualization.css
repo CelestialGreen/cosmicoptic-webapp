@@ -1,0 +1,213 @@
+.shap-visualization {
+  margin-top: var(--spacing-lg);
+  padding: var(--spacing-sm);
+}
+
+.shap-header {
+  margin-bottom: var(--spacing-md);
+  padding-bottom: var(--spacing-sm);
+  border-bottom: 1px solid var(--panel-border);
+}
+
+.shap-header h3 {
+  color: var(--accent-color);
+  margin-bottom: var(--spacing-xs);
+}
+
+.shap-subtitle {
+  color: var(--text-secondary);
+  font-size: 0.9rem;
+  font-style: italic;
+}
+
+/* SHAP Chart */
+.shap-chart-container {
+  margin-bottom: var(--spacing-lg);
+  overflow: hidden;
+}
+
+.shap-chart {
+  width: 100%;
+  overflow: hidden;
+  display: block;
+}
+
+.shap-chart .zero-line {
+  stroke-dasharray: 3, 3;
+}
+
+.shap-legend {
+  display: flex;
+  gap: var(--spacing-md);
+  justify-content: center;
+  margin-top: var(--spacing-sm);
+  padding-top: var(--spacing-sm);
+  border-top: 1px solid var(--panel-border);
+}
+
+.shap-legend .legend-item {
+  display: flex;
+  align-items: center;
+  gap: var(--spacing-xs);
+  color: var(--text-secondary);
+  font-size: 0.85rem;
+}
+
+.shap-legend .legend-box {
+  width: 20px;
+  height: 15px;
+  border-radius: 2px;
+}
+
+.shap-legend .legend-box.positive {
+  background: rgba(0, 191, 255, 0.5);
+}
+
+.shap-legend .legend-box.negative {
+  background: rgba(255, 69, 0, 0.5);
+}
+
+/* Top Features */
+.top-features {
+  margin: var(--spacing-lg) 0;
+  padding: var(--spacing-md);
+  background: rgba(0, 0, 0, 0.2);
+  border-radius: var(--radius-md);
+}
+
+.top-features h4 {
+  color: var(--highlight-color);
+  margin-bottom: var(--spacing-md);
+  font-size: 1rem;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.features-list {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-md);
+}
+
+.feature-item {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-xs);
+}
+
+.feature-info {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: var(--spacing-xs);
+}
+
+.feature-time {
+  color: var(--text-color);
+  font-size: 0.9rem;
+  font-weight: 500;
+}
+
+.feature-contribution {
+  font-size: 0.95rem;
+  font-weight: 600;
+  padding: 2px 8px;
+  border-radius: var(--radius-sm);
+}
+
+.feature-contribution.positive {
+  color: var(--accent-color);
+  background: rgba(0, 191, 255, 0.15);
+}
+
+.feature-contribution.negative {
+  color: var(--warning-color);
+  background: rgba(255, 69, 0, 0.15);
+}
+
+.feature-bar-container {
+  width: 100%;
+  height: 8px;
+  background: rgba(0, 0, 0, 0.3);
+  border-radius: var(--radius-sm);
+  overflow: hidden;
+}
+
+.feature-bar {
+  height: 100%;
+  border-radius: var(--radius-sm);
+  transition: width 0.8s ease;
+}
+
+.feature-bar.positive {
+  background: linear-gradient(90deg, var(--accent-color), var(--highlight-color));
+  box-shadow: 0 0 8px var(--accent-color);
+}
+
+.feature-bar.negative {
+  background: linear-gradient(90deg, var(--warning-color), #ff6347);
+  box-shadow: 0 0 8px var(--warning-color);
+}
+
+/* Explanation Summary */
+.explanation-summary {
+  margin: var(--spacing-lg) 0;
+  padding: var(--spacing-md);
+  background: linear-gradient(135deg, rgba(0, 191, 255, 0.1), rgba(127, 255, 0, 0.1));
+  border-left: 3px solid var(--accent-color);
+  border-radius: var(--radius-md);
+  display: flex;
+  gap: var(--spacing-md);
+  align-items: flex-start;
+}
+
+.summary-icon {
+  font-size: 1.5rem;
+  flex-shrink: 0;
+}
+
+.explanation-summary p {
+  color: var(--text-color);
+  line-height: 1.6;
+  font-size: 0.95rem;
+  margin: 0;
+}
+
+/* SHAP Metrics */
+.shap-metrics {
+  display: flex;
+  gap: var(--spacing-lg);
+  justify-content: center;
+  padding: var(--spacing-md);
+  background: rgba(0, 0, 0, 0.2);
+  border-radius: var(--radius-sm);
+  margin-top: var(--spacing-md);
+}
+
+.metric {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: var(--spacing-xs);
+}
+
+.metric-label {
+  color: var(--text-secondary);
+  font-size: 0.8rem;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.metric-value {
+  color: var(--accent-color);
+  font-size: 1.2rem;
+  font-weight: 600;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .shap-metrics {
+    flex-direction: column;
+    gap: var(--spacing-md);
+  }
+}
