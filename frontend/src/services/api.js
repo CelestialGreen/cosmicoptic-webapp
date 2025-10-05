@@ -1,6 +1,8 @@
 import axios from 'axios';
 
-const API_BASE_URL = import.meta.env.VITE_API_URL || 'http://localhost:8000';
+// Normalize API base URL to avoid double-slash issues when concatenating paths
+const rawBase = import.meta.env.VITE_API_URL || 'http://localhost:8000';
+const API_BASE_URL = rawBase.replace(/\/+$/, '');
 
 const api = axios.create({
   baseURL: API_BASE_URL,
@@ -38,16 +40,12 @@ export const cosmicOpticAPI = {
     const formData = new FormData();
     formData.append('file', file);
 
-    const response = await axios.post(
-      `${API_BASE_URL}/api/predict/upload`,
-      formData,
-      {
-        headers: {
-          'Content-Type': 'multipart/form-data',
-        },
-        timeout: 30000,
-      }
-    );
+    const response = await api.post('/api/predict/upload', formData, {
+      headers: {
+        'Content-Type': 'multipart/form-data',
+      },
+      timeout: 30000,
+    });
     return response.data;
   },
 
