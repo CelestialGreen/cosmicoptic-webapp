@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { motion } from 'framer-motion';
 import axios from 'axios';
+import api from '../services/api';
 import './ModelMetrics.css';
 
 const API_URL = import.meta.env.VITE_API_URL || 'http://localhost:8000';
@@ -17,7 +18,7 @@ const ModelMetrics = () => {
   const fetchMetrics = async () => {
     try {
       setLoading(true);
-      const response = await axios.get(`${API_URL}/api/metrics`);
+      const response = await api.get('/api/metrics');
       setMetrics(response.data);
       setError(null);
     } catch (err) {
